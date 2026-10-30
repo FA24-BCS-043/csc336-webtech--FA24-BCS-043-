@@ -274,3 +274,55 @@ body:has(#cat-gaming:checked) .product-item:not([data-category="gaming"]) {
     font-size: 14px;
   }
 }
+
+/* ===== MIDTERM Task 2 (BP = 643px, sticky top = 73px) ===== */
+.product-layout {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "image"
+    "details"
+    "description";
+}
+
+.product-image {
+  grid-area: image;
+}
+
+.product-details {
+  grid-area: details;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.product-description {
+  grid-area: description;
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+/* 643px = BP */
+@media (min-width: 643px) {
+  .product-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "image details"
+      "description description";
+  }
+
+  .product-details {
+    position: sticky;
+    top: 73px; /* (43 mod 40) + 70 */
+    align-self: start; /* without this the box stretches and cannot stick */
+  }
+
+  /* tall image row gives the sticky box room to travel */
+  .product-image .product-detail-image {
+    max-height: none;
+    height: clamp(520px, 85vh, 720px);
+  }
+}

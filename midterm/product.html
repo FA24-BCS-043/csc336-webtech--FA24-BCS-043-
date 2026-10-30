@@ -48,11 +48,11 @@
       </div>
     </nav>
 
-    <!-- Product Details -->
+    <!-- Product Details (Task 2: CSS Grid with named areas) -->
     <main class="container my-5">
-      <div class="row g-4 align-items-start">
-        <!-- Product Image -->
-        <div class="col-12 col-md-6">
+      <div class="product-layout">
+        <!-- grid-area: image -->
+        <div class="product-image">
           <img
             src="https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?q=80&w=1113&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
             alt="Wireless Headphones"
@@ -60,19 +60,11 @@
           />
         </div>
 
-        <!-- Product Information -->
-        <div class="col-12 col-md-6">
+        <!-- grid-area: details (sticky from BP up) -->
+        <div class="product-details">
           <h1 class="product-detail-title">Wireless Headphones</h1>
 
           <p class="price product-detail-price">Rs. 3,499</p>
-
-          <p>
-            Enjoy your favourite music with these wireless headphones. Designed
-            for everyday use, they offer comfortable listening and a convenient
-            wireless experience.
-          </p>
-
-          <p><strong>Category:</strong> Audio Accessories</p>
 
           <label for="quantity" class="form-label">
             <strong>Quantity:</strong>
@@ -88,6 +80,67 @@
 
           <button type="button" class="btn add-btn mt-3">Add to Cart</button>
         </div>
+
+        <!-- grid-area: description -->
+        <section class="product-description">
+          <h2 class="section-heading">Product Description</h2>
+          <p><strong>Category:</strong> Audio Accessories</p>
+          <p>
+            Enjoy your favourite music with these wireless headphones. Designed
+            for everyday use, they offer comfortable listening and a convenient
+            wireless experience.
+          </p>
+          <p>
+            The padded ear cups and adjustable headband are built for long
+            listening sessions, whether you are studying in the library,
+            travelling between campuses or relaxing at home. The lightweight
+            frame keeps pressure off your head, and the soft cushioning stays
+            comfortable even after several hours of use.
+          </p>
+          <p>
+            Pairing is quick and simple. Switch the headphones on, select them
+            from the Bluetooth menu on your phone or laptop, and you are
+            connected within seconds. The headphones remember previously paired
+            devices, so reconnecting later happens automatically.
+          </p>
+          <h3 class="h5">Key features</h3>
+          <ul>
+            <li>Wireless Bluetooth connection with a stable range</li>
+            <li>Soft padded ear cups for all-day comfort</li>
+            <li>Built-in microphone for calls and online classes</li>
+            <li>Foldable design that fits easily in a backpack</li>
+            <li>Simple on-ear buttons for volume and playback</li>
+          </ul>
+          <p>
+            Battery life is designed to last through a full day of normal use.
+            When the battery runs low, a short charge gives you several more
+            hours of playback, so you are never left without music during a busy
+            day.
+          </p>
+          <h3 class="h5">What is in the box</h3>
+          <ul>
+            <li>Wireless Headphones</li>
+            <li>USB charging cable</li>
+            <li>Quick start guide</li>
+            <li>Carry pouch</li>
+          </ul>
+          <p>
+            Every purchase from The Cool Store is checked before dispatch. If
+            something is not right with your headphones, contact us through the
+            footer link and we will help you sort it out.
+          </p>
+          <h3 class="h5">Care instructions</h3>
+          <p>
+            Wipe the ear cups gently with a soft, dry cloth. Keep the headphones
+            away from water and extreme heat, and store them in the included
+            pouch when you are not using them. Avoid leaving them plugged in
+            once fully charged for the best battery health over time.
+          </p>
+          <p>
+            Scroll up and down on a wide screen to see the details box stay in
+            view beside the image while you read the description.
+          </p>
+        </section>
       </div>
     </main>
 
