@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wireless Headphones - The Cool Store</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg store-navbar">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">The Cool Store</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#products">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">🛒 Cart</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Product Details -->
+    <main class="container my-5">
+      <div class="row g-4 align-items-start">
+        <!-- Product Image -->
+        <div class="col-12 col-md-6">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?q=80&w=1113&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+            alt="Wireless Headphones"
+            class="img-fluid rounded product-detail-image"
+          />
+        </div>
+
+        <!-- Product Information -->
+        <div class="col-12 col-md-6">
+          <h1 class="product-detail-title">Wireless Headphones</h1>
+
+          <p class="price product-detail-price">Rs. 3,499</p>
+
+          <p>
+            Enjoy your favourite music with these wireless headphones. Designed
+            for everyday use, they offer comfortable listening and a convenient
+            wireless experience.
+          </p>
+
+          <p><strong>Category:</strong> Audio Accessories</p>
+
+          <label for="quantity" class="form-label">
+            <strong>Quantity:</strong>
+          </label>
+
+          <select id="quantity" class="form-select quantity-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+          <button type="button" class="btn add-btn mt-3">Add to Cart</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="store-footer text-center py-4">
+      <p class="mb-0">&copy; 2026 The Cool Store. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
