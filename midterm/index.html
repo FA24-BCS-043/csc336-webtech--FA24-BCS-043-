@@ -68,11 +68,45 @@
     <section class="container mb-4">
       <h2 class="section-heading">Shop by Category</h2>
 
+      <!-- Task 1: hidden radios + category buttons as labels -->
+      <input
+        type="radio"
+        name="category"
+        id="cat-all"
+        class="visually-hidden"
+        checked
+      />
+      <input
+        type="radio"
+        name="category"
+        id="cat-audio"
+        class="visually-hidden"
+      />
+      <input
+        type="radio"
+        name="category"
+        id="cat-computer"
+        class="visually-hidden"
+      />
+      <input
+        type="radio"
+        name="category"
+        id="cat-mobile"
+        class="visually-hidden"
+      />
+      <input
+        type="radio"
+        name="category"
+        id="cat-gaming"
+        class="visually-hidden"
+      />
+
       <div class="category-list">
-        <a href="#products">Audio</a>
-        <a href="#products">Computer Accessories</a>
-        <a href="#products">Mobile Accessories</a>
-        <a href="#products">Gaming</a>
+        <label for="cat-all">All</label>
+        <label for="cat-audio">Audio</label>
+        <label for="cat-computer">Computer Accessories</label>
+        <label for="cat-mobile">Mobile Accessories</label>
+        <label for="cat-gaming">Gaming</label>
       </div>
     </section>
 
@@ -81,7 +115,7 @@
       <h2 class="section-heading mb-4">Flash Deals & Popular Products</h2>
 
       <div class="row g-3">
-        <div class="col-6 col-md-4 col-lg-3">
+        <div class="col-6 col-md-4 col-lg-3 product-item" data-category="audio">
           <div class="card product-card h-100">
             <img
               src="https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?q=80&w=1113&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
@@ -96,7 +130,10 @@
           </div>
         </div>
 
-        <div class="col-6 col-md-4 col-lg-3">
+        <div
+          class="col-6 col-md-4 col-lg-3 product-item"
+          data-category="computer"
+        >
           <div class="card product-card h-100">
             <img
               src="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
@@ -112,7 +149,10 @@
           </div>
         </div>
 
-        <div class="col-6 col-md-4 col-lg-3">
+        <div
+          class="col-6 col-md-4 col-lg-3 product-item"
+          data-category="computer"
+        >
           <div class="card product-card h-100">
             <img
               src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=400&q=80"
@@ -128,7 +168,10 @@
           </div>
         </div>
 
-        <div class="col-6 col-md-4 col-lg-3">
+        <div
+          class="col-6 col-md-4 col-lg-3 product-item"
+          data-category="mobile"
+        >
           <div class="card product-card h-100">
             <img
               src="https://images.unsplash.com/photo-1731616103600-3fe7ccdc5a59?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
@@ -144,7 +187,10 @@
           </div>
         </div>
 
-        <div class="col-6 col-md-4 col-lg-3">
+        <div
+          class="col-6 col-md-4 col-lg-3 product-item"
+          data-category="mobile"
+        >
           <div class="card product-card h-100">
             <img
               src="https://images.unsplash.com/photo-1594843665794-446ce915d840?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
@@ -160,7 +206,10 @@
           </div>
         </div>
 
-        <div class="col-6 col-md-4 col-lg-3">
+        <div
+          class="col-6 col-md-4 col-lg-3 product-item"
+          data-category="computer"
+        >
           <div class="card product-card h-100">
             <img
               src="https://images.unsplash.com/photo-1623251606108-512c7c4a3507?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
@@ -176,7 +225,10 @@
           </div>
         </div>
 
-        <div class="col-6 col-md-4 col-lg-3">
+        <div
+          class="col-6 col-md-4 col-lg-3 product-item"
+          data-category="gaming"
+        >
           <div class="card product-card h-100">
             <img
               src="https://images.unsplash.com/photo-1629429407756-4a7703614972?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
@@ -192,7 +244,7 @@
           </div>
         </div>
 
-        <div class="col-6 col-md-4 col-lg-3">
+        <div class="col-6 col-md-4 col-lg-3 product-item" data-category="audio">
           <div class="card product-card h-100">
             <img
               src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=400&q=80"

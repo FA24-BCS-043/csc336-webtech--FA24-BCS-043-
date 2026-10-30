@@ -227,3 +227,50 @@ body {
 main {
   flex: 1;
 }
+
+/* ===== MIDTERM Task 1 (H = 301) ===== */
+:root {
+  --accent: hsl(301, 70%, 45%);
+}
+
+/* the category buttons are now labels, styled like the old links */
+.category-list label {
+  background-color: white;
+  color: #333;
+  padding: 10px 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.category-list label:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* selected filter uses the accent colour */
+body:has(#cat-all:checked) label[for="cat-all"],
+body:has(#cat-audio:checked) label[for="cat-audio"],
+body:has(#cat-computer:checked) label[for="cat-computer"],
+body:has(#cat-mobile:checked) label[for="cat-mobile"],
+body:has(#cat-gaming:checked) label[for="cat-gaming"] {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+/* hide cards that don't match (display:none = no gaps in the grid) */
+body:has(#cat-audio:checked) .product-item:not([data-category="audio"]),
+body:has(#cat-computer:checked) .product-item:not([data-category="computer"]),
+body:has(#cat-mobile:checked) .product-item:not([data-category="mobile"]),
+body:has(#cat-gaming:checked) .product-item:not([data-category="gaming"]) {
+  display: none;
+}
+
+/* small phones: same smaller buttons your old links had */
+@media (max-width: 375px) {
+  .category-list label {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}
