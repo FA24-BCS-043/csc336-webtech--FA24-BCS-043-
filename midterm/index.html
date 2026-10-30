@@ -30,8 +30,13 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarContent">
-          <form class="d-flex search-form mx-lg-4 my-3 my-lg-0" role="search">
+          <form
+            id="navSearchForm"
+            class="d-flex search-form mx-lg-4 my-3 my-lg-0"
+            role="search"
+          >
             <input
+              id="productSearch"
               class="form-control"
               type="search"
               placeholder="Search products..."
@@ -68,11 +73,12 @@
     <section class="container mb-4">
       <h2 class="section-heading">Shop by Category</h2>
 
-      <!-- Task 1: hidden radios + category buttons as labels -->
+      <!-- Task 1: radios (hidden) + the existing category buttons turned into labels -->
       <input
         type="radio"
         name="category"
         id="cat-all"
+        value="all"
         class="visually-hidden"
         checked
       />
@@ -80,24 +86,28 @@
         type="radio"
         name="category"
         id="cat-audio"
+        value="audio"
         class="visually-hidden"
       />
       <input
         type="radio"
         name="category"
         id="cat-computer"
+        value="computer"
         class="visually-hidden"
       />
       <input
         type="radio"
         name="category"
         id="cat-mobile"
+        value="mobile"
         class="visually-hidden"
       />
       <input
         type="radio"
         name="category"
         id="cat-gaming"
+        value="gaming"
         class="visually-hidden"
       />
 
@@ -114,7 +124,16 @@
     <main class="container mb-5" id="products">
       <h2 class="section-heading mb-4">Flash Deals & Popular Products</h2>
 
-      <div class="row g-3">
+      <!-- Task 3: sort button (search = navbar search box) -->
+      <div class="toolbar mb-3">
+        <button type="button" id="sortBtn" class="btn sort-btn">
+          Sort by price
+        </button>
+      </div>
+
+      <p id="noResults" class="no-results" hidden>No products found</p>
+
+      <div class="row g-3 product-grid">
         <div class="col-6 col-md-4 col-lg-3 product-item" data-category="audio">
           <div class="card product-card h-100">
             <img
@@ -268,5 +287,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

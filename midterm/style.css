@@ -326,3 +326,41 @@ body:has(#cat-gaming:checked) .product-item:not([data-category="gaming"]) {
     height: clamp(520px, 85vh, 720px);
   }
 }
+
+/* ===== MIDTERM Task 3 (accent H = 301) ===== */
+.sort-btn {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+}
+
+.sort-btn:hover {
+  background-color: hsl(301, 70%, 35%);
+  color: white;
+}
+
+/* cards hidden by the search (category filter hides with its own rules) */
+.search-hidden {
+  display: none !important;
+}
+
+.no-results {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.premium-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  background-color: var(--accent);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
